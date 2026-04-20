@@ -1,51 +1,10 @@
 package com.example;
 
-public final class Persona {
+public record Persona(String nombre, double altura, String correo) {}
+// Una clase record es una clase especial en Java que se utiliza para representar datos inmutables.
+// Los records son una forma concisa de definir clases que solo contienen datos, sin necesidad de
+// escribir código adicional para constructores, getters, equals, hashCode, etc. En este caso, la clase
+// Persona es un record que tiene dos campos: nombre (de tipo String) y altura (de tipo double). 
+// Al ser un record, se generan automáticamente los métodos necesarios para acceder a estos campos y
+// para comparar objetos de tipo Persona.
 
-    private final String nombre = "Rodrigo";
-    private final double altura = 1.95;
-
-    public Persona() {
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
-        long temp;
-        temp = Double.doubleToLongBits(altura);
-        result = prime * result + (int) (temp ^ (temp >>> 32));
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Persona other = (Persona) obj;
-        if (nombre == null) {
-            if (other.nombre != null)
-                return false;
-        } else if (!nombre.equals(other.nombre))
-            return false;
-        if (Double.doubleToLongBits(altura) != Double.doubleToLongBits(other.altura))
-            return false;
-        return true;
-    }
-    
-
-
-}
