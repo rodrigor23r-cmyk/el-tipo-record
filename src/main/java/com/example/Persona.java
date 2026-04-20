@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 // @Builder public record Persona(String nombre, double altura, String correo) {}
 
 
-en este caso se debe importar Data para trabajar con Strings
+//en este caso se debe importar Data para trabajar con Strings
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

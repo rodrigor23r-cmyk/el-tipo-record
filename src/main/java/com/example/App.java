@@ -6,7 +6,7 @@ public class App {
    
 
 
-/* El antiguo buider de Lombok sería algo así:
+// El antiguo buider de Lombok sería algo así:
         Persona persona4 = Persona.builder()
             .nombre("Carlos")
             .altura(1.80)
@@ -14,5 +14,5 @@ public class App {
             .build();
         System.out.println("Persona 4: " + persona4);
     }
-        */
+        
 }
